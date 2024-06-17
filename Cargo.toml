@@ -1,5 +1,5 @@
 [package]
-name = "worker-rust"
+name = "milkshake-email"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,7 +7,9 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = "0.0.18"
+worker = { version = "0.1.0", features = ["http"] }
+http = "1.1.0"
+console_error_panic_hook = "0.1.6"
 
 [profile.release]
 opt-level = "s" # optimize for size in release builds
